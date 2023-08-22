@@ -1,3 +1,5 @@
+import CTAButton from "@/components/ctabutton";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen p-5">
@@ -7,12 +9,7 @@ export default function Home() {
       </section>
       <section id="home-cta" className="p-5">
         <h3 className="text-xl m-5">Subtitle</h3>
-        <button
-          id="cta-button"
-          className="text-xl p-5 bg-red-100 hover:underline"
-        >
-          Go Here
-        </button>
+        <CTAButton labelName="Go Here" isSubmit={false} />
       </section>
     </main>
   );
