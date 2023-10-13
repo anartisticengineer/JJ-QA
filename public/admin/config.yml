@@ -15,12 +15,12 @@ collections:
       - { label: "Title 2", name: "subtitle", widget: "string" }
       - { label: "Summary", name: "subtitle", widget: "string" }
       - label: "CTA"
-        name: "homeCta":
+        name: "homeCta"
         widget: "object"
-        summary: "Call To Action Info"
+        summary: "CTA - {{fields.homeCtaText}}"
         fields:
-        - { label: "CTA Button Text", name: "homeCtaText", widget: "string" }
-        - { label: "CTA Button URL" , name: "homeCtaUrl", widget: "string"}
+          - { label: "CTA Button Text", name: "homeCtaText", widget: "string" }
+          - { label: "CTA Button URL", name: "homeCtaUrl", widget: "string" }
   - name: "about"
     label: "About Me"
     folder: "_pages"
@@ -52,7 +52,11 @@ collections:
         widget: "list"
         allow_add: true
         fields:
-         - { label: "Post Title", name: "postTitle", widget: "string", default: "New Blog Post" }
-         - { label: "Post Content", name: "postContent", widget: "markdown" }
-         - { label: "Creation Date", name: "postTime", widget: "datetime" }
-
+          - {
+              label: "Post Title",
+              name: "postTitle",
+              widget: "string",
+              default: "New Blog Post",
+            }
+          - { label: "Post Content", name: "postContent", widget: "markdown" }
+          - { label: "Creation Date", name: "postTime", widget: "datetime" }
