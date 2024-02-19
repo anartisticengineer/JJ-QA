@@ -1,0 +1,16 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "Automation UI tests for JJ-QA",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Justin Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.41.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.19"
+  }
+}
