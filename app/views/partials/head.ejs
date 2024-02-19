@@ -1,0 +1,30 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/output.css" />
+  <title><%= title %></title>
+  <script
+    src="https://kit.fontawesome.com/aad179a178.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    let menuOpen = false;
+    const toggleMobile = () => {
+      const links = document.getElementById("nav-links-mobile-container");
+      const menuIcon = document.getElementById("mobile-toggle-menu-icon");
+      const closeIcon = document.getElementById(
+        "mobile-toggle-close-menu-icon"
+      );
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        links.hidden = false;
+        menuIcon.hidden = true;
+        closeIcon.hidden = false;
+      } else {
+        links.hidden = true;
+        menuIcon.hidden = false;
+        closeIcon.hidden = true;
+      }
+    };
+  </script>
+</head>

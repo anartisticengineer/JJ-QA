@@ -1,0 +1,37 @@
+<header class="p-2 bg-gray-800 text-gray-200 lg:p-8">
+  <ul class="w-10/12 hidden lg:flex" id="nav-links-desktop">
+    <li class="mx-2">
+      <a href="/" class="hover:text-white hover:underline" tabindex="0">Home</a>
+    </li>
+    <li class="mx-2">
+      <a href="/about" class="hover:text-white hover:underline">About Me</a>
+    </li>
+    <li class="mx-2">
+      <a href="/resume" class="hover:text-white hover:underline">Resume</a>
+    </li>
+    <li class="mx-2">
+      <a href="/contact" class="hover:text-white hover:underline">Contact</a>
+    </li>
+  </ul>
+  <div id="nav-links-mobile" class="lg:hidden text-lg">
+    <button id="mobile-toggle" class="p-2" onclick="toggleMobile()">
+      <i id="mobile-toggle-menu-icon" class="fa-solid fa-bars"></i>
+      <i id="mobile-toggle-close-menu-icon" class="fa-solid fa-x" hidden></i>
+    </button>
+    <!-- open/close link view -->
+    <ul id="nav-links-mobile-container" class="flex-column p-2" hidden>
+      <li class="my-2">
+        <a href="/" class="hover:text-white hover:underline">Home</a>
+      </li>
+      <li class="my-2">
+        <a href="/about" class="hover:text-white hover:underline">About Me</a>
+      </li>
+      <li class="my-2">
+        <a href="/resume" class="hover:text-white hover:underline">Resume</a>
+      </li>
+      <li class="my-2">
+        <a href="/contact" class="hover:text-white hover:underline">Contact</a>
+      </li>
+    </ul>
+  </div>
+</header>
