@@ -2,8 +2,8 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./views/pages/**/*.{html,ejs}",
-    "./views/partials/**/*.{html,ejs}",
+    "./src/views/pages/**/*.{html,ejs}",
+    "./src/views/partials/**/*.{html,ejs}",
   ],
   theme: {
     extend: {},
