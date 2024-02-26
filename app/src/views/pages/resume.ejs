@@ -3,8 +3,40 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main class="p-5">
-      <h1>Resume</h1>
+    <main class="p-10 lg:p-5">
+      <h1 class="m-10 text-4xl text-center font-bold">Resume</h1>
+      <section class="flex-column lg:grid grid-cols-4 mx-2 my-5">
+        <div class="col-span-1"></div>
+        <ul class="col-span-2">
+          <% experiences.forEach(experience => { %>
+          <li class="mb-10">
+            <div>
+              <h2 class="text-3xl py-2"><%= experience.role %></h2>
+              <h3 class="text-2xl py-2"><%= experience.companyName %></h3>
+              <!-- date -->
+              <div class="py-2 italic">
+                <span><%= experience.fromDate %></span> -
+                <span><%= experience.toDate || 'Present' %></span>
+              </div>
+              <!-- summary field -->
+              <ul class="p-2 list-disc">
+                <% experience.summary.forEach(summaryElement => { %>
+                <li class="py-1"><%= summaryElement %></li>
+                <% }) %>
+              </ul>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+        <aside class="col-span-1">
+          <h2 class="m-10 text-2xl text-center font-bold">Skills</h2>
+          <ul class="list-disc">
+            <% skills.forEach(skill => { %>
+            <li class="py-1"><%= skill %></li>
+            <% }) %>
+          </ul>
+        </aside>
+      </section>
     </main>
     <%- include('../partials/footer') %>
   </body>
