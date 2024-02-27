@@ -3,8 +3,39 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main class="p-5 h-48">
-      <h1 class="mx-2">Contact</h1>
+    <main class="p-10 lg:p-5">
+      <h1 class="m-10 text-4xl text-center font-bold">Contact</h1>
+      <section class="flex-column lg:grid grid-cols-4 mx-2 my-5">
+        <form action="" method="post">
+          <div class="py-5">
+            <label for="contact-email" class="block py-2">Email</label>
+            <input
+              class="p-2"
+              type="email"
+              name=""
+              id="contact-email"
+              placeholder="Email"
+            />
+          </div>
+          <div class="py-5">
+            <label for="contact-comment" class="block py-2">Comment</label>
+            <textarea
+              class="p-2"
+              name=""
+              id="contact-comment"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="p-2 bg-gray-900 text-white hover:bg-gray-100 hover:text-black"
+          >
+            Sumbit
+          </button>
+        </form>
+      </section>
     </main>
     <%- include('../partials/footer') %>
   </body>
