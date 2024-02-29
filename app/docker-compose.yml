@@ -9,5 +9,14 @@ services:
       context: .
       dockerfile: Dockerfile
       target: base
+    develop:
+      watch:
+        - path: ./package.json
+          action: rebuild
+        - path: ./package-lock.json
+          action: rebuild
+        - path: ./src
+          target: /app
+          action: sync
     ports:
       - "${PORT}:${PORT}"
