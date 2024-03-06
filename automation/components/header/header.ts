@@ -1,10 +1,11 @@
-import { Locator } from "playwright";
+import { Page } from "playwright";
 import BaseComponent from "../baseComponent";
 import LinkElement from "../linkElement";
 
+const testId = "header";
 export default class Header extends BaseComponent {
-  constructor(container: Locator) {
-    super(container);
+  constructor(page: Page) {
+    super(page.getByTestId(testId));
   }
 
   public get HOME_LINK(): LinkElement {

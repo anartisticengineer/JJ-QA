@@ -9,4 +9,8 @@ export default class BaseComponent {
   public get CONTAINER(): Locator {
     return this.container;
   }
+
+  async scrollToElem() {
+    await this.container.scrollIntoViewIfNeeded();
+  }
 }

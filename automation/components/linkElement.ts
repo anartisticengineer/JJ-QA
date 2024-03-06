@@ -1,4 +1,4 @@
-import { Locator } from "playwright";
+import { Locator, Page } from "playwright";
 import BaseComponent from "./baseComponent";
 
 export default class LinkElement extends BaseComponent {
