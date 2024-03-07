@@ -3,8 +3,74 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main class="p-5 h-48">
-      <h1 class="mx-2">Contact</h1>
+    <main class="p-10 lg:p-5">
+      <h1 class="m-10 text-4xl text-center font-bold">Contact</h1>
+      <div class="p-10 lg:p-5">
+        <p class="text-center">
+          Contact me with the form below. Or you can reach out to me on my other
+          social media.
+        </p>
+      </div>
+      <section class="flex-column lg:grid grid-cols-4 mx-2 my-5">
+        <div class="col-span-1"></div>
+        <form class="col-span-2" action="" method="post">
+          <!-- name & email -->
+          <div class="flex-column lg:flex justify-around py-2">
+            <span class="flex-1 pr-5 lg:inline-block">
+              <label for="contact-name" class="block py-5">Name</label>
+              <input
+                class="border border-solid p-2 w-full"
+                id="contact-name"
+                placeholder="Name"
+              />
+            </span>
+            <span class="flex-1 lg:inline-block">
+              <label for="contact-email" class="block py-5">Email</label>
+              <input
+                class="border border-solid p-2 w-full"
+                type="email"
+                name=""
+                id="contact-email"
+                placeholder="Email"
+              />
+            </span>
+          </div>
+          <!-- contact reason -->
+          <div class="py-2">
+            <label for="contact-reason" class="block py-5"
+              >Reason for Contact</label
+            >
+            <select name="" id="contact-reason" class="p-2">
+              <% contactReasons.forEach(reason => { %>
+              <option value="<%= reason.value %>"><%= reason.name %></option>
+              <% }) %>
+            </select>
+          </div>
+          <!-- your message here -->
+          <div class="py-2">
+            <label for="contact-message" class="block py-5"
+              >Your Message Here</label
+            >
+            <textarea
+              class="border border-solid p-2 w-full"
+              name=""
+              id="contact-message"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <div class="py-2">
+            <button
+              type="submit"
+              class="p-5 w-full bg-gray-900 text-white hover:bg-gray-100 hover:text-black"
+            >
+              Sumbit
+            </button>
+          </div>
+        </form>
+        <div class="col-span-1"></div>
+      </section>
     </main>
     <%- include('../partials/footer') %>
   </body>

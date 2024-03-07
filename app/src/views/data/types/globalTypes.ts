@@ -48,3 +48,8 @@ export interface Experience {
   companyName: string;
   summary: string[];
 }
+
+export interface ContactReason {
+  name: string;
+  value: string;
+}
