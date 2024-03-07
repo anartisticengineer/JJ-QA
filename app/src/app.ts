@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import { experiences, skills } from "./views/data/pages/resume";
+import { contactReasons } from "./views/data/pages/contact";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -34,6 +35,7 @@ app.get("/resume", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("pages/contact", {
     title: "Contact Me",
+    contactReasons: contactReasons,
   });
 });
 
