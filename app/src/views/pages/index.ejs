@@ -3,12 +3,57 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main class="p-5 h-48">
-      <h1 class="mx-2">
-        JJ-QA<% if (environment) { %>
-        <span> - <%= environment %></span>
-        <% } %>
-      </h1>
+    <main class="flex-column lg:grid grid-flow-row">
+      <!-- home banner -->
+      <div
+        id="jj-qa-home-banner"
+        class="p-10 bg-black col-span-2 text-center w-full"
+      >
+        <h1 class="p-5 text-5xl md:text-8xl text-white">
+          JJ-QA<% if (environment) { %>
+          <span> - <%= environment %></span>
+          <% } %>
+        </h1>
+        <h2 class="p-5 text-3xl md:text-5xl text-gray-300">
+          Quality Assurance Engineer
+        </h2>
+      </div>
+      <section class="col-span-1 p-10 bg-gray-100">
+        <h2 class="py-5 text-5xl font-semibold">What I do?</h2>
+        <div class="py-5 text-lg">
+          <p>
+            I'm a CAST certified QA Engineer/SDET with a couple years of
+            experience under my belt. The super abridged version: I specialize
+            in web testing: manual and automated, API and UI
+          </p>
+          <p>
+            You can get the full story by
+            <a href="/resume" class="font-semibold hover:underline">
+              having a look at my resume!</a
+            >
+          </p>
+        </div>
+      </section>
+      <section class="col-span-1 p-10 bg-gray-200">
+        <h2 class="py-5 text-5xl font-semibold">Need QA help?</h2>
+        <div class="py-5 text-lg">
+          <p>
+            If my experience sounds like a good fit, then you can
+            <a
+              href="https://www.upwork.com/freelancers/~01ffd804138b160a7e?mp_source=share"
+              target="_blank"
+              class="font-semibold hover:underline"
+              >hire me as a freelancer on Upwork!</a
+            >
+          </p>
+        </div>
+      </section>
+      <section class="col-span-2 p-10 bg-gray-300">
+        <h3 class="py-5 font-semibold">Testing status</h3>
+        <span class="py-5"
+          >Coming soon: using Playwright to display test results here :&rpar;
+        </span>
+      </section>
     </main>
     <%- include('../partials/footer') %>
   </body>
