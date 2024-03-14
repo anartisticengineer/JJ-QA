@@ -4,7 +4,11 @@
   <body>
     <%- include('../partials/header') %>
     <main class="p-5 h-48">
-      <h1 class="mx-2">JJ-QA</h1>
+      <h1 class="mx-2">
+        JJ-QA<% if (environment) { %>
+        <span> - <%= environment %></span>
+        <% } %>
+      </h1>
     </main>
     <%- include('../partials/footer') %>
   </body>
