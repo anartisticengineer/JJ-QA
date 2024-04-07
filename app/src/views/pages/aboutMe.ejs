@@ -3,9 +3,38 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <main class="p-5">
-      <h1>About Me</h1>
-      <div id="jj-qa-about-me-paragraph"></div>
+    <main class="p-10 lg:p-5">
+      <h1 class="m-10 text-4xl text-center font-bold">About Me</h1>
+      <section class="flex-column lg:grid grid-cols-4 mx-2 my-5">
+        <div class="col-span-1 p-10">
+          <figure>
+            <img
+              src="../images/my_profile_photo_jj.webp"
+              alt="My profile photo"
+              class="my-5 rounded-3xl"
+            />
+            <figcaption class="p-5 text-center">
+              Me back in 2021 ;&rpar;
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-span-2 p-10 text-lg" id="jj-qa-about-me-paragraph">
+          <p class="py-5">
+            The name's Justin Johnson &lpar;yes, you can call me JJ for
+            short&rpar;. I'm a QA engineer currently based in Denver, Colorado.
+          </p>
+          <p class="py-5">
+            I have about 4 years of general experience in software development,
+            3 in particular with QA. Much of my time with automation has been on
+            the web side of things, specializing in UI and API test automation.
+          </p>
+          <p class="py-5">
+            Outside of the tech industry, I love making art, cooking, bike
+            riding, learning Mandarin and Japanese, video games &lpar;especially
+            fighting games&rpar;, occasionally sightseeing...a lot of stuff.
+          </p>
+        </div>
+      </section>
     </main>
     <%- include('../partials/footer') %>
   </body>
